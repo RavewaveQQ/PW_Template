@@ -1,0 +1,20 @@
+{
+  "name": "pw-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "e2e": "playwright tests --project=chromium --reporter=html",
+    "api": "playwright tests --project=chromium --reporter=html",
+    "ui": "playwright tests --ui --project=chromium",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "UI & API tests using the Playwright Test",
+  "devDependencies": {
+    "@faker-js/faker": "^9.0.3",
+    "@playwright/test": "^1.47.2",
+    "@types/node": "^22.7.4"
+  }
+}
