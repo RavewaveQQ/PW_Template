@@ -11,11 +11,12 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./",
     "paths": {
-      "@modals": ["modals"],
-      "@components": ["components"],
-      "@page.object": ["pages"],
+      "@modals": ["app/modals"],
+      "@components": ["app/components"],
+      "@page.object": ["app/pages"],
       "@fixtures": ["fixtures"],
-      "@test_data": ["test_data"]
+      "@test_data": ["test_data"],
+      "@step": ["reporter"]
     }
   }
 }

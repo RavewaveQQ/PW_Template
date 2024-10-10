@@ -21,7 +21,7 @@ export default defineConfig({
     screenshot: 'off',
     video: 'off',
     headless: true,
-
+    testIdAttribute: 'data-qa'
   },
 
   projects: [
