@@ -8,6 +8,7 @@ type BaseFixture = {
 export const test = base.extend<BaseFixture>({
   app: async ({ page }, use) => {
     const app = new Application(page);
+    await app.home.navigateTo()
     await use(app);
   },
 });

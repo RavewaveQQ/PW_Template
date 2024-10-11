@@ -1,5 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
-import { BASE_URL } from './.test_data/test_data';
+import { BASE_URL, sessionJsonPath } from '@test_data';
 
 
 export default defineConfig({
@@ -14,14 +14,15 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 6 : undefined,
   reporter: [["list"], ["html"  ]],
-
+  globalSetup: './global.setup',
   use: {
     baseURL: BASE_URL,
     trace: "retain-on-failure",
     screenshot: 'off',
     video: 'off',
     headless: true,
-    testIdAttribute: 'data-qa'
+    testIdAttribute: 'data-qa',
+    storageState: sessionJsonPath
   },
 
   projects: [
