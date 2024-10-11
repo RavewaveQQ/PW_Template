@@ -1,5 +1,5 @@
-import {AddressInfoModel} from './../type'
 import {faker} from '@faker-js/faker';
+import {AddressInfoModel} from '@type'
 
 
 export const BASE_URL = 'https://automationexercise.com';

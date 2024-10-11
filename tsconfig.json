@@ -16,7 +16,8 @@
       "@page.object": ["app/pages"],
       "@fixtures": ["fixtures"],
       "@test_data": ["test_data"],
-      "@step": ["reporter"]
+      "@step": ["reporter"],
+      "@type": ["type"]
     }
   }
 }

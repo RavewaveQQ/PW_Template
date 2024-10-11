@@ -2,7 +2,7 @@ import { Header } from '@components';
 import {AppPage} from '@page.object';
 import { expect, Locator } from '@playwright/test';
 import { step } from '@step';
-import {Gender, Month, AddressInfoModel, County} from './../../type'
+import {Gender, Month, AddressInfoModel, County} from '@type'
 
 
 export class SignUp extends AppPage{
