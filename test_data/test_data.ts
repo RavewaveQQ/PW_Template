@@ -2,7 +2,14 @@ import {faker} from '@faker-js/faker';
 import {AddressInfoModel} from '@type'
 
 
-export const BASE_URL = 'https://automationexercise.com';
+export const ENV = process.env.ENV || 'dev';
+
+export const BASE_URL = {
+    dev:'https://automationexercise.com',
+    stage: 'https://stage.example.com',
+    prod: 'https://www.example.com',
+};
+
 export const sessionJsonPath = './session.json';
 
 export const addressInfoGenerator:AddressInfoModel = {

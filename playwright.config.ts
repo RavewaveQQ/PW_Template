@@ -1,5 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
-import { BASE_URL, sessionJsonPath } from '@test_data';
+import { BASE_URL, ENV, sessionJsonPath } from '@test_data';
 
 
 export default defineConfig({
@@ -16,7 +16,7 @@ export default defineConfig({
   reporter: [["list"], ["html"  ]],
   globalSetup: './global.setup',
   use: {
-    baseURL: BASE_URL,
+    baseURL: BASE_URL[ENV as keyof typeof BASE_URL],
     trace: "retain-on-failure",
     screenshot: 'off',
     video: 'off',
