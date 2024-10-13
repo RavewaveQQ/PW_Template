@@ -1,7 +1,15 @@
 pipeline {
+    agent any
+    stages {
+        stage('Check Docker') {
+            steps {
+                sh 'docker --version'
+            }
+        }
+    }
     agent {
         docker {
-            image 'mcr.microsoft.com/playwright:focal'
+            image 'mcr.microsoft.com/playwright:v1.48.0-noble'
             reuseNode true
         }
     }
